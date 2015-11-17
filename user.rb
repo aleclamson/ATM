@@ -2,8 +2,8 @@
 
 class User
 
-		$data = File.read('users.txt')
-		$users = $data.split("\n").map { |line| line.split(',') }
+		data = File.read('users.txt')
+		users = data.split("\n").map { |line| line.split(',') }
 
 	def initialize pin
 		@current_user = $users.assoc(pin)

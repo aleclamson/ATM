@@ -1,18 +1,11 @@
-require_relative "user"
-require_relative "interface"
-require_relative "console"
+require_relative 'user'
+require_relative 'console'
+require_relative 'interface'
 
-class ATM
-
-	def initialize
-		
-	end
-
-end
-
-display = ARGV
-if display.eql?("console")
-	@console
+choice = ARGV[0]
+if choice.eql?("console")
+	interface = Console.new
 else
-	@interface
+	interface = Interface.new
 end
+interface.show
